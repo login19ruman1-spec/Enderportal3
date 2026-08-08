@@ -2,7 +2,7 @@ package com.example.plugin;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class MyFirstPlugin extends JavaPlugin {
+public final class Enderportal3 extends JavaPlugin {
 
     @Override
     public void onEnable() {
