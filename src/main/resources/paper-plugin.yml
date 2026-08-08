@@ -1,0 +1,6 @@
+name: MyFirstPlugin
+version: '1.0.0'
+main: com.example.plugin.MyFirstPlugin
+api-version: '1.21'
+author: ВашНикнейм
+description: Мой первый плагин на Purpur 1.21.4!
