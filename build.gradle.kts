@@ -7,18 +7,26 @@ version = "1.0.0"
 
 repositories {
     mavenCentral()
-    maven("https://papermc.io") // Откуда брать код Майнкрафта
+    maven("https://papermc.io")
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT") // Версия 1.21.4
+    compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
 }
 
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
-    options.release.set(21) // Для 1.21.4 нужна именно Java 21
+    options.release.set(21)
+}
+
+// Принудительно заставляем Gradle собирать JAR при команде build
+tasks.build {
+    dependsOn(tasks.jar)
 }
 
 tasks.jar {
-    archiveFileName.set("MyFirstPlugin.jar") // Имя готового файла
+    archiveFileName.set("Enderportal3")
+    // Важная строка: собираем плагин, даже если нет сложной структуры
+    from(sourceSets.main.get().output) 
 }
+
