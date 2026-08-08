@@ -2,7 +2,7 @@ plugins {
     java
 }
 
-group = "com.example.plugin"
+group = "com.login19ruman1.enderportal"
 version = "1.0.0"
 
 repositories {
@@ -19,14 +19,11 @@ tasks.withType<JavaCompile> {
     options.release.set(21)
 }
 
-// Принудительно заставляем Gradle собирать JAR при команде build
 tasks.build {
     dependsOn(tasks.jar)
 }
 
 tasks.jar {
-    archiveFileName.set("Enderportal3")
-    // Важная строка: собираем плагин, даже если нет сложной структуры
-    from(sourceSets.main.get().output) 
+    archiveFileName.set("Enderportal.jar")
+    from(sourceSets.main.get().output)
 }
-
