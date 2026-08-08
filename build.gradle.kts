@@ -28,6 +28,6 @@ tasks.build {
 }
 
 tasks.jar {
-    archiveFileName.set("Enderportal.jar")
+    archiveFileName.set("Enderportal3.jar")
     from(sourceSets.main.get().output)
 }
