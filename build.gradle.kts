@@ -7,10 +7,14 @@ version = "1.0.0"
 
 repositories {
     mavenCentral()
+    // Основной и резервные репозитории для Paper API версии 1.21.4
+    maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://papermc.io")
+    maven("https://repo.stellardrift.ca/maven/snapshots/")
 }
 
 dependencies {
+    // API для разработки плагинов под версию 1.21.4
     compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
 }
 
