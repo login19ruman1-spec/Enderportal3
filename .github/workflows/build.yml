@@ -1,4 +1,4 @@
-name: Build Plugin
+name: Enderportal3
 
 on:
   push:
@@ -29,5 +29,5 @@ jobs:
     - name: Upload Jar
       uses: actions/upload-artifact@v4
       with:
-        name: MyPlugin-Jar-File
+        name: Enderportal3-Jar-File
         path: build/libs/*.jar
