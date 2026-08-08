@@ -1,8 +1,8 @@
-name: Enderportal3
+name: Build Plugin
 
 on:
   push:
-    branches: [ "main", "master" ] # Запускать сборку при каждом сохранении
+    branches: [ "main", "master" ]
 
 jobs:
   build:
@@ -18,16 +18,11 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
 
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v4
-
     - name: Build with Gradle
       run: gradle build
-        chmod +x gradlew || true
-        ./gradlew build
 
     - name: Upload Jar
       uses: actions/upload-artifact@v4
       with:
-        name: Enderportal3-Jar-File
-        path: build/libs/*.jar
+        name: Enderportal-Jar
+        path: build/libs/Enderportal.jar
