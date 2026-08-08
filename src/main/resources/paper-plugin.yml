@@ -1,6 +1,6 @@
 name: Enderportal3
 version: '1.0.0'
-main: com.example.plugin.MyFirstPlugin
+main: com.example.plugin.Enderportal3
 api-version: '1.21'
-author: ВашНикнейм
-description: Мой первый плагин на Purpur 1.21.4!
+author: login19ruman1
+description: Плагин Enderportal3 для Purpur 1.21.4
